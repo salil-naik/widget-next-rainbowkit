@@ -781,10 +781,10 @@
   resolved "https://registry.yarnpkg.com/@socket.tech/ll-core/-/ll-core-0.1.47.tgz#c3cfcaa5c5c9db04fb0280227328ad819779f18f"
   integrity sha512-JSCiWdWfpGaJWAQUwaZYUJPkFmaZQg8Q8EVzg7ZL1m6bbtwI0ass/dZDhwV0kbtElUeEmJF26hpdT+ApSpNTXw==
 
-"@socket.tech/plugin@^1.1.3":
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/@socket.tech/plugin/-/plugin-1.1.3.tgz#08d6a02965a6f16cd901fda3d363d86813e70878"
-  integrity sha512-j05VKOpX2m/OA7EMcKGPh6tpUjYiEjosYf2zS5qFmfskPH2JPCA/kzr+Ok2s95kjM0MCttnJyjnscVhU/BfT0Q==
+"@socket.tech/plugin@^1.1.4":
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/@socket.tech/plugin/-/plugin-1.1.4.tgz#51ac97717360c0812bc83c0589d3bd3867c1c097"
+  integrity sha512-3vLw2w5ZD0hatjpe7vWUI3S06nM58wysRUW6v85SSu32eghPbEOqSVSE5tBCtYsWLIBc4w7QMP+GM+syI0+GZA==
   dependencies:
     "@react-spring/web" "^9.5.0"
     "@reduxjs/toolkit" "^1.8.2"
