@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@rainbow-me/rainbowkit": "^1.0.5",
-    "@socket.tech/plugin": "file:socket.tech-plugin-1.1.4-tooltip.tgz",
+    "@socket.tech/plugin": "file:socket.tech-plugin-1.2.0-test.tgz",
     "ethers": "5.7.2",
     "next": "^13.4.3",
     "react": "^18.2.0",

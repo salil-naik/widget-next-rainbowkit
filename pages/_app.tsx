@@ -10,6 +10,7 @@ import {
   optimism,
   polygon,
   zora,
+  zkSync
 } from 'wagmi/chains';
 import { publicProvider } from 'wagmi/providers/public';
 
@@ -20,6 +21,7 @@ const { chains, publicClient, webSocketPublicClient } = configureChains(
     optimism,
     arbitrum,
     zora,
+    zkSync,
     ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === 'true' ? [goerli] : []),
   ],
   [publicProvider()]

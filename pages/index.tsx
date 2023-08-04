@@ -40,11 +40,11 @@ const Home: NextPage = () => {
   // const walletClient = useWalletClient({chainId: currentChain?.id})
   // // const publicClient = usePublicClient({ chainId: currentChain?.id });
   // // const abc = new ethers.providers.Web3Provider(window.ethereum, "any");
-  const signer = useEthersSigner({chainId: currentChain?.id})
+  const signer = useEthersSigner({ chainId: currentChain?.id });
   const provider = signer?.provider;
 
   // console.log("provider", provider);
-  console.log('singer', signer, provider);
+  console.log("singer", signer, provider);
 
   useEffect(() => {
     if (provider) {
@@ -53,12 +53,15 @@ const Home: NextPage = () => {
   }, [provider]);
 
   const switchNetwork = async (provider: any) => {
-      // const formattedChainId = "0x76adf1"; // for zora - make sure it works well with plugin
-      const formattedChainId = "0x89"; // for polygon - make sure it works well with plugin
-      await provider.provider.request({
-        method: "wallet_switchEthereumChain",
-        params: [{ chainId: formattedChainId }],
-      });
+    // const formattedChainId = "0x76adf1"; // for zora - make sure it works well with plugin
+    const formattedChainId = "0x89"; // for polygon - make sure it works well with plugin
+    // await provider.provider.request({
+    //   method: "wallet_switchEthereumChain",
+    //   params: [{ chainId: formattedChainId }],
+    // });
+    await provider.send("wallet_switchEthereumChain", [
+      { chainId: formattedChainId },
+    ]);
   };
 
   return (
@@ -75,7 +78,9 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <div style={{ marginBottom: "40px" }}>
           <ConnectButton />
-          <button onClick={() => switchNetwork(provider)}>Switch to Zora</button>
+          <button onClick={() => switchNetwork(provider)}>
+            Switch to Zora
+          </button>
         </div>
 
         <DynamicBridge
